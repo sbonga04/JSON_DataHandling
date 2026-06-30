@@ -1,12 +1,15 @@
 package application;
 
 import org.json.JSONObject;
+
+import java.util.LinkedHashMap;
+
 /*Scanner s = new Scanner(System.in);
 s.
 * */
 public class DataReading {
-    static void main() {
 
+    private static String hardcoded(){
         String object = """
                 {
                     "name": Matcha,
@@ -18,6 +21,12 @@ public class DataReading {
         JSONObject jsonObject = new JSONObject(object);
 
         //get String from the root object
-        System.out.print(jsonObject.toString(4));
+        String s = jsonObject.toString(4);
+        return s;
+    }
+    static void main() {
+
+        System.out.println(DataReading.hardcoded());
+
     }
 }
