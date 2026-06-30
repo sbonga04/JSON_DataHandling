@@ -15,10 +15,9 @@ public class DataReading {
                 }
                 """;
         // Pass the string into the constructor
-        JSONObject JsonObject = new JSONObject(object);
+        JSONObject jsonObject = new JSONObject(object);
 
         //get String from the root object
-        boolean b = JsonObject.getBoolean("in_stock");
-        System.out.println(b);
+        System.out.print(jsonObject.toString(4));
     }
 }
